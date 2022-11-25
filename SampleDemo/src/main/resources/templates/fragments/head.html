@@ -1,0 +1,33 @@
+<!-- Fragment : head -->
+<th:block th:fragment = "head">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link th:href="@{css/commonStyles/commonStyles.css}" rel="stylesheet" type="text/css"/>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script th:src="@{js/pages/script.js}" type="text/javascript"></script>
+</th:block>
+
+
+
+
+<!-- example to show : mark up sent as paramter instead of texts -->
+<th:block th:fragment = "common-head(title,links)">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	
+	<!-- title will be replaced by the one received from calling template -->
+	<title th:replace="${title}">The awesome application</title>
+	
+	<!-- common styles -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link th:href="@{css/commonStyles/commonStyles.css}" rel="stylesheet" type="text/css" href="../../static/css/commonStyles/commonStyles.css"/>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script th:src="@{js/pages/script.js}" type="text/javascript" src="../../static/js/pages/script.js"></script>
+	<!-- per page additional styles will be added here-->
+	<th:block th:replace="${links}" />
+	
+</th:block>

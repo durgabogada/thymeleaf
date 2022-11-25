@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	padding: 1.5rem 0;
+    gap: 4rem 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+	flex: 0 0 30%;
+	max-width: 30%;
+}
+
+.card img {
+	height: 85%;
+    width: 100%;
+}
+
+.card .name {
+	margin: 0.3rem 0;
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
+.card .location {
+	margin: 0.3rem 0;
+	font-weight: 500;
+	font-size: 0.9rem;
+}

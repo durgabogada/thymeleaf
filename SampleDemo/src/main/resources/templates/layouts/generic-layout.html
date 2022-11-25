@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+	<head th:include="fragments/head :: head">
+		<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Home</title>
+	</head>
+
+	<body>
+	   <div th:replace="fragments/nav-bar :: page-header"></div>
+		<main class="wrapper" layout:fragment="content">
+		</main>
+		<footer th:include="fragments/footer :: footer">This is footer section</footer>
+	</body>
+</html>

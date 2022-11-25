@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html layout:decorate="~{layouts/generic-layout}">
+   <head th:include="fragments/head :: head">
+	  <title>Home</title>
+   </head>
+	<body>
+	   <div th:replace="fragments/nav-bar :: page-header"></div>
+	   <main class="wrapper" layout:fragment="content">
+			<h1>Users</h1>
+			<object th:replace="fragments/common-components :: greeting(name='Lakshmi Durga',date='August 15')"></object>
+			<object th:replace="fragments/common-components :: greeting(name='Bago',email='xyz@example.com')"></object>
+		</main>
+		<footer th:include="fragments/footer :: footer">This is footer section</footer>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- common components :: Button Component - STARTS -->
+
+<button type="button" class="btn" th:classappend="${'btn-'+type}" th:fragment="button(type,label)" th:id="${id}" th:text="${label}">
+
+</button>
+
+<!-- common components :: Button Component - ENDS -->
+
+
+<!-- common components :: greeting message - STARTS -->
+<p th:fragment="greeting(name)" 
+   th:with="date=${date} ?: today" class='greeting-message'>
+   <span th:text="${name}"></span> 
+   <span>visited this site</span>
+   <th:block th:if="${email}">
+   		<span>with</span>
+   		<span  th:text="${email}"></span>
+   </th:block>
+   <span>on</span>
+   <span th:text="${date}"></span> 
+</p>
+<!-- common components :: greeting message - ENDS -->

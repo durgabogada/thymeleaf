@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head th:include="fragments/head :: head">
+		<title>Home</title>
+	</head>
+
+	<body>
+	   <div th:replace="fragments/nav-bar :: page-header"></div>
+		<main class="wrapper">
+			<h1>Cricket Stadium</h1>
+			<p class="description">
+			  A cricket field is a large grass field on which the game of cricket is played. Although generally oval in shape, there is a wide variety within this: some are almost perfect circles, some elongated ovals and some entirely irregular shapes with little or no symmetry – but they will have entirely curved boundaries, almost without exception.
+			</p>
+			<p class="description">
+			  There are no fixed dimensions for the field but its diameter usually varies between 450 feet (137 m) and 500 feet (150 m) for men's cricket, and between 360 feet (110 m) and 420 feet (130 m) for women's cricket. Cricket is unusual among major sports (along with golf, Australian rules football and baseball) in that there is no official rule 
+			  for a fixed-shape ground for professional games. 
+			</p>
+			<p class="description">
+			  On most grounds, a rope demarcates the perimeter of the field and is known as the boundary.
+			  Within the boundary and generally as close to the centre as possible will be the square which is an area of carefully prepared grass upon which cricket pitches can be prepared and marked for the matches.
+			</p>
+			<p class="description">
+			  The pitch is where batsmen hit the bowled ball and run between the wickets to score runs, while the fielding team tries to return the ball to either wicket to prevent this.</p>
+			</p>
+			<div th:insert="fragments/common-components :: button(type='primary',label='View All',id='viewAll')"></div>
+		</main>
+		<footer th:include="fragments/footer :: footer">This is footer section</footer>
+	</body>
+</html>
+
+<!-- 
+	1.Template selector : "~{templatename::selector}"
+	2. th:include, th:insert, th:replace
+	3. th:text
+	
+	
+-->

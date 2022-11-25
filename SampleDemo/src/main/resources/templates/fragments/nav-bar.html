@@ -1,0 +1,15 @@
+<!-- Fragment : header -->
+<header th:fragment="page-header">
+	<th:block th:replace="this :: navBar"></th:block>
+	<div>Hi <span th:text="${session.name}"></span></div>
+</header>
+
+<!-- Fragment : Navbar -->
+
+<nav th:fragment="navBar" id='navBar'>
+	<ul>
+	  <li class ="active"><a th:href="@{home}">Home</a></li>
+	  <li><a th:href="@{cities}">Cities</a></li>
+	  <li><a th:href="@{about}">About</a></li>
+	</ul>
+</nav>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head th:replace="fragments/head :: common-head(~{::title},~{::link})">
+		<title>Cities</title>
+		<link rel="stylesheet" th:href="@{css/pages/cities.css}">
+	</head>
+	<body>
+		<div th:replace="fragments/nav-bar :: page-header"></div>
+		
+		<main class="wrapper">
+			<h1>Cricket stadiums in various cities</h1>
+			<!-- Cities :: STARTS -->
+			<div class="container">
+				<div class="card" th:each="stadium :${stadiumList}">
+					<img th:src="${stadium.imageUrl}" th:alt="${stadium.name}"/> 
+					<h3 th:text="${stadium.name}" class="name"></h3>
+					<h4 th:text="${stadium.location}" class="location"></h4>
+				</div>
+			</div>
+			<!-- Cities :: ENDS -->
+		</main>
+		<!-- Footer :: STARTS -->
+		<div th:replace="fragments/footer :: #footerContent">This is footer section</div>
+		<!-- Footer :: ENDS -->
+		
+	</body>
+</html>
+
+<!-- 
+	1.mark up selector : "~{templatename:: fragmentName(~{::markup selector})}"
+		a. empty mark up selector  "~{templatename:: fragmentName(~{})}"   - content is empty
+	    b. no operation token  "~{templatename:: fragmentName(_)}"  - default value i.e, one mentioned in called template is used
+	
+	2. iteration 
+-->
